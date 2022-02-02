@@ -1,6 +1,7 @@
-h1, h2, h3, h4, h5, h6, p, li {
+h1, h2, h3, h4, h5, h6, p, li, a {
     font-family: 'PT Sans', sans-serif;
     margin-bottom: 20px;
+    color: #020029;
 }
 
 h2:not(:first-of-type) {
@@ -37,9 +38,17 @@ p, ol, ul {
     margin-bottom: 40px;
 }
 
+.note-link {
+    display: block;
+    width: fit-content;
+    line-height: 160%;
+    font-size: 1.3rem;
+}
+
 body {
     padding: 0;
     margin: 0;
+    background-color: #fcfcfa;
 }
 
 #title {
@@ -53,10 +62,17 @@ body {
 }
 
 #content {
-    width: 30vw;
-    margin-left: 35vw;
+    width: 44vw;
+    margin-left: 28vw;
 }
 
 #v-spacer {
     height: 100px;
+}
+
+#topic-link {
+    color: #3932c7;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-decoration: none;
 }

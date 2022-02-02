@@ -12,7 +12,9 @@
   "dependencies": {
     "fs-extra": "^10.0.0",
     "gray-matter": "^4.0.3",
+    "katex": "^0.15.2",
     "markdown-wasm": "^1.2.0",
-    "recursive-readdir": "^2.2.2"
+    "recursive-readdir": "^2.2.2",
+    "title-case": "^3.0.3"
   }
 }
