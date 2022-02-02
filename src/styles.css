@@ -1,3 +1,4 @@
+/* General text styles */
 h1, h2, h3, h4, h5, h6, p, li, a {
     font-family: 'PT Sans', sans-serif;
     margin-bottom: 20px;
@@ -38,17 +39,13 @@ p, ol, ul {
     margin-bottom: 40px;
 }
 
-.note-link {
+
+/* Specialty text styles */
+.note-link, .topic-link {
     display: block;
     width: fit-content;
     line-height: 160%;
     font-size: 1.3rem;
-}
-
-body {
-    padding: 0;
-    margin: 0;
-    background-color: #fcfcfa;
 }
 
 #title {
@@ -61,6 +58,74 @@ body {
     margin-bottom: 60px;
 }
 
+#explanation-text {
+    font-style: italic;
+    color: #555;
+}
+
+#nav-link {
+    color: #3932c7;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+span.special {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #eeebe3;
+    margin: 0;
+    padding: 20px 0;
+    border-radius: 4px;
+    padding: 5px 10px;
+    height: fit-content;
+}
+
+span.special::before {
+    content:"";
+    background-image:url(../public/images/lightbulb.png) !important;
+    background-size: 40px 40px;
+    width: 40px;
+    height: 40px;
+    margin: 10px 10px 10px 5px;
+    display: inline-block;
+}
+
+p > span.special {
+    font-weight: 700;
+}
+
+
+/* LaTeX styles */
+.katex-display {
+    background-color: #eeebe3;
+    margin: 0;
+    padding: 20px 0;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+span.katex-display > * span.base:first-child {
+    margin-left: 10px;
+}
+
+span.katex-display > * span.base:last-child {
+    margin-right: 10px;
+}
+
+.newline {
+    height: 15px;
+}
+
+
+/* Page styles */
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #fcfcfa;
+}
+
 #content {
     width: 44vw;
     margin-left: 28vw;
@@ -68,11 +133,4 @@ body {
 
 #v-spacer {
     height: 100px;
-}
-
-#topic-link {
-    color: #3932c7;
-    font-weight: 700;
-    font-size: 1.2rem;
-    text-decoration: none;
 }

@@ -1,10 +1,6 @@
 // build.js
 // Creates the HTML pages in public/ for all the blog pages in notes/
 
-// TODO:
-// - index page
-// - add better navigation between pages
-
 const fs = require('fs-extra')
 const markdown = require("markdown-wasm")
 const katex = require('katex')
@@ -14,7 +10,7 @@ const matter = require('gray-matter')
 
 // Generates a date string given a date object
 // ex. Tuesday, February 1, 2022
-const prettyDate = d => d.toLocaleString("en-US", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
+const prettyDate = d => d.toLocaleString("en-US", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })
 
 // Returns the filepath of the HTML note page, given its markdown filepath
 // ex. "notes/test/test-page.md" becomes "/public/test/test-page.html"
@@ -25,7 +21,10 @@ const notePageUrl = mdFilepath => `/public/${mdFilepath.substring(6, mdFilepath.
 const topicPageUrl = topic => `/public/${topic}.html`
 
 // Generates the HTML link tag for a note page, from the corresponding topic page
-const noteLinkFromTopicPage = (note, topic) => `<a class="note-link" href="${__dirname}/public/${topic}/${note}.html">${tc.titleCase(note.replace(/-/g, " "))}</a>`
+const notePageLinkTag = (note, topic) => `<a class="note-link" href="${__dirname}/public/${topic}/${note}.html">${tc.titleCase(note.replace(/-/g, " "))}</a>`
+
+// Generates the HTMl link tag for a topic page, from the index page
+const topicPageLinkTag = topic => `<a class="topic-link" href="${__dirname}/public/${topic}.html">${tc.titleCase(topic.replace(/-/g, " "))}</a>`
 
 // Generates a list of topics found in the notes/ folder, and the notes associated with each topic
 const generateTopicStructure = files => {
@@ -74,12 +73,19 @@ const generatePages = () => recursive("notes/", (err, files) => {
     // uses the list of all note files to generate the topic structure
     const topicStructure = generateTopicStructure(files)
 
+    // generates the index page filled with links to each topic page
+    const template = fs.readFileSync("src/index-template.html", "utf8")
+    const html = template.replace(/TOPIC_LINKS/g, topicStructure.map(t => topicPageLinkTag(t.topic)).join(""))
+
+    console.log(`Generating index page`)
+    fs.outputFileSync(__dirname + "/public/index.html", html)
+
     // generates a topic page for each topic found with notes in the notes/ folder
     for (const topic of topicStructure) {
         const template = fs.readFileSync("src/topic-template.html", "utf8")
         const html = template
             .replace(/TOPIC/g, tc.titleCase(topic.topic.replace(/-/g, " ")))
-            .replace(/NOTES/g, topic.notes.map(n => noteLinkFromTopicPage(n, topic.topic)).join(""))
+            .replace(/NOTES/g, topic.notes.map(n => notePageLinkTag(n, topic.topic)).join(""))
 
         console.log(`Generating topic page for ${topic.topic}`)
         fs.outputFileSync(__dirname + topicPageUrl(topic.topic), html)
@@ -97,11 +103,12 @@ const generatePages = () => recursive("notes/", (err, files) => {
         const html = template
             .replace(/CONTENT/g, markdownAsHtml)
             .replace(/TITLE/g, noteContents.data.title)
-            .replace(/TOPIC_NAME/g, `← ${tc.titleCase(topic.replace(/-/g, " "))}`)
+            .replace(/TOPIC_NAME/g, tc.titleCase(topic.replace(/-/g, " ")))
             .replace(/TOPIC_LINK/g, `${__dirname}/public/${topic}.html`)
             .replace(/DATE/g, date)
             .replace(/\$\$(.+?)\$\$/g, (_, latex) => katex.renderToString(latex.replace(/<\/?em>/g, "*"), { throwOnError: false, displayMode: true }))
             .replace(/\$(.+?)\$/g, (_, latex) => katex.renderToString(latex.replace(/<\/?em>/g, "*"), { throwOnError: false }))
+            .replace(/!!(.*)!!/g, `<span class="special">$1</span>`)
 
         console.log(`Generating note page for ${file}`)
         fs.outputFileSync(__dirname + notePageUrl(file), html)

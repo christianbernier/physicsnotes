@@ -17,32 +17,18 @@ A **transformation** describes how to change observations from one frame of refe
 
 In classical physics, a set of transformations known as **Galilean transformations** are used. For an observer $O'$ moving at velocity $u$ in the positive $x$ direction with respect to observer $O$, the following equations describe the classical relativity:
 
-$$x'=x-ut$$
-
-$$y'=y$$
-
-$$z'=z$$
-
-$$t'=t$$
+$$x'=x-ut \newline y'=y \newline z'=z \newline t'=t$$
 
 Note: the last equation, $t'=t$, means that in Galilean transformations time is the same for all observers.
 
 Taking the derivative of each equation with respect to time (this works because time is the same for all observers), we find the Galilean velocity transformations as such:
 
-$$v_x'=v_x-u$$
-
-$$v_y'=v_y$$
-
-$$v_z'=v_z$$
+$$v_x'=v_x-u \newline v_y'=v_y \newline v_z'=v_z$$
 
 Finally, the Galilean acceleration transformations are as follows:
 
 
-$$a_x'=a_x$$
-
-$$a_y'=a_y$$
-
-$$a_z'=a_z$$
+$$a_x'=a_x \newline a_y'=a_y \newline a_z'=a_z$$
 
 ## The Michelson-Morley Experiment
 
