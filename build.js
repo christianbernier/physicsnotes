@@ -12,7 +12,7 @@ const recursive = require("recursive-readdir")
 const matter = require('gray-matter')
 const spellchecker = require('spellchecker')
 
-const CHECK_SPELLING = true
+const CHECK_SPELLING = false
 
 // Generates a date string given a date object
 // ex. Tuesday, February 1, 2022
@@ -90,6 +90,7 @@ const generatePages = () => recursive("notes/", (err, files) => {
     // generates the index page filled with links to each topic page
     const template = fs.readFileSync("src/index-template.html", "utf8")
     const html = template.replace(/TOPIC_LINKS/g, topicStructure.map(t => topicPageLinkTag(t.topic)).join(""))
+    console.log(topicStructure.map(t => topicPageLinkTag(t.topic)).join(""));
 
     // console.log(`Generating index page`)
     fs.outputFileSync(__dirname + "/public/index.html", html)
@@ -108,7 +109,7 @@ const generatePages = () => recursive("notes/", (err, files) => {
             .replace(/TOPIC/g, tc.titleCase(topic.topic.substring(3).replace(/-/g, " ")))
             .replace(/NOTES/g, topic.notes.map(n => notePageLinkTag(n, topic.topic)).join(""))
 
-        // console.log(`Generating topic page for ${topic.topic}`)
+        console.log(`Generating topic page for ${topic.topic}`)
         fs.outputFileSync(__dirname + topicPageUrl(topic.topic), html)
     }
 
