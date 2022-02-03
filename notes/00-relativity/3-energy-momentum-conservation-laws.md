@@ -30,11 +30,11 @@ Note: the velocity, $v$, in the denominator is the velocity of the object with r
 
 In classical mechanics, work is defined as such:
 
-$$W=\int Fdx=\int\frac{dp}{dt}\,dx=\int\frac{dx}{dt}\,dp=\int v\,dp=pv-\int p\,dv$$
+$$W=\int Fdx=\int\frac{dp}{dt}~dx=\int\frac{dx}{dt}~dp=\int v~dp=pv-\int p~dv$$
 
 Using the new definition for momentum, we get:
 
-$$K=\frac{mv}{\sqrt{1-\frac{v^2}{c^2}}}v-\int_0^v \frac{mv}{\sqrt{1-\frac{v^2}{c^2}}}\,dv=\frac{mv^2}{\sqrt{1-\frac{v^2}{c^2}}}+mc^2\sqrt{1-\frac{v^2}{c^2}}-mc^2 \newline K=\frac{mc^2}{\sqrt{1-\frac{v^2}{c^2}}}-mc^2$$
+$$K=\frac{mv}{\sqrt{1-\frac{v^2}{c^2}}}v-\int_0^v \frac{mv}{\sqrt{1-\frac{v^2}{c^2}}}~dv=\frac{mv^2}{\sqrt{1-\frac{v^2}{c^2}}}+mc^2\sqrt{1-\frac{v^2}{c^2}}-mc^2 \newline K=\frac{mc^2}{\sqrt{1-\frac{v^2}{c^2}}}-mc^2$$
 
 It may not look like it, but this simplifies to $K=\frac{1}{2}mv^2$ for small values of $v$.
 

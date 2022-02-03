@@ -1,6 +1,9 @@
 // build.js
 // Creates the HTML pages in public/ for all the blog pages in notes/
 
+// TODO:
+// - programmatically create shareimages
+
 const fs = require('fs-extra')
 const markdown = require("markdown-wasm")
 const katex = require('katex')
@@ -76,7 +79,7 @@ const generatePages = () => recursive("notes/", (err, files) => {
     // so that they are displayed in the correct order. anywhere with
     // substring(2) or substring(3) is simply getting rid of that for
     // displaying to the user
-    files.sort((a, b) => a < b);
+    files.sort();
 
     // uses the list of all note files to generate the topic structure
     const topicStructure = generateTopicStructure(files)

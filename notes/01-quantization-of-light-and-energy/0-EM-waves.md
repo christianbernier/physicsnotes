@@ -47,9 +47,9 @@ $$P=SA=\frac{1}{\mu_0}E_0B_0A\sin^2{\left(kz-\omega t\right)}$$
 
 Or, since $B_0=E_0/c$,
 
-$$P=\frac{1}{\mu_0c}E_0\,^2A\sin^2{\left(kz-\omega t\right)}$$
+$$P=\frac{1}{\mu_0c}E_0^2A\sin^2{\left(kz-\omega t\right)}$$
 
-Notice how the power delivered is proportional to $E_0\,^2$. This means the **intensity**, average power per unit area, is proportional to the square of the amplitude of the wave.
+Notice how the power delivered is proportional to $E_0^2$. This means the **intensity**, average power per unit area, is proportional to the square of the amplitude of the wave.
 
 ### Average power
 
@@ -57,9 +57,9 @@ According to the equation above, intensity fluctuates with a frequency of $2f=2\
 
 Sensors (like our eyes) can't see fluctuations in intensity on the order of $10^{15}$ times per second. Therefore, we can find the average power as such:
 
-$$P_{average}=\frac{1}{T}\int_0^TP\,dt$$
+$$P_{average}=\frac{1}{T}\int_0^TP\~dt$$
 
-$$I=\frac{P_{average}}{A}=\frac{1}{2\mu_0c}E_0\,^2$$
+$$I=\frac{P_{average}}{A}=\frac{1}{2\mu_0c}E_0^2$$
 
 ## Waves Interacting
 
