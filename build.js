@@ -20,17 +20,17 @@ const prettyDate = d => d.toLocaleString("en-US", { weekday: 'long', year: 'nume
 
 // Returns the filepath of the HTML note page, given its markdown filepath
 // ex. "notes/test/test-page.md" becomes "/public/test/test-page.html"
-const notePageUrl = mdFilepath => `${(process.env.NETLIFY) ? "" : "/public/" + mdFilepath.substring(6, mdFilepath.length - 3)}.html`
+const notePageUrl = mdFilepath => `${((process.env.NETLIFY) ? "" : "/public/") + mdFilepath.substring(6, mdFilepath.length - 3)}.html`
 
 // Returns the filepath of a topic page, given the topic
 // ex. "test-topic" becomes "/public/test-topic.html"
-const topicPageUrl = topic => `${(process.env.NETLIFY) ? "" : "/public/" + topic}.html`
+const topicPageUrl = topic => `${((process.env.NETLIFY) ? "" : "/public/") + topic}.html`
 
 // Generates the HTML link tag for a note page, from the corresponding topic page
-const notePageLinkTag = (note, topic) => `<a class="note-link" href="${(process.env.NETLIFY) ? "" : `${__dirname}/public/` + topic}/${note}.html">${tc.titleCase(note.substring(2).replace(/-/g, " "))}</a>`
+const notePageLinkTag = (note, topic) => `<a class="note-link" href="${((process.env.NETLIFY) ? "" : `${__dirname}/public/`) + topic}/${note}.html">${tc.titleCase(note.substring(2).replace(/-/g, " "))}</a>`
 
 // Generates the HTMl link tag for a topic page, from the index page
-const topicPageLinkTag = topic => `<a class="topic-link" href="${(process.env.NETLIFY) ? "" : `${__dirname}/public/` + topic}.html">${tc.titleCase(topic.substring(3).replace(/-/g, " "))}</a>`
+const topicPageLinkTag = topic => `<a class="topic-link" href="${((process.env.NETLIFY) ? "" : `${__dirname}/public/`) + topic}.html">${tc.titleCase(topic.substring(3).replace(/-/g, " "))}</a>`
 
 // Generates a list of topics found in the notes/ folder, and the notes associated with each topic
 const generateTopicStructure = files => {
@@ -125,7 +125,7 @@ const generatePages = () => recursive("notes/", (err, files) => {
             .replace(/CONTENT/g, markdownAsHtml)
             .replace(/TITLE/g, noteContents.data.title)
             .replace(/TOPIC_NAME/g, tc.titleCase(topic.substring(3).replace(/-/g, " ")))
-            .replace(/TOPIC_LINK/g, `${(process.env.NETLIFY) ? "" : `${__dirname}/public/` + topic}.html`)
+            .replace(/TOPIC_LINK/g, `${((process.env.NETLIFY) ? "" : `${__dirname}/public/`) + topic}.html`)
             .replace(/DATE/g, date)
             .replace(/\$\$(.+?)\$\$/g, (_, latex) => katex.renderToString(latex.replace(/<\/?em>/g, "*").replace(/<\/?del>/g, "~"), { throwOnError: false, displayMode: true }))
             .replace(/\$(.+?)\$/g, (_, latex) => katex.renderToString(latex.replace(/<\/?em>/g, "*").replace(/<\/?del>/g, "~"), { throwOnError: false }))
