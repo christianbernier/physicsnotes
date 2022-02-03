@@ -109,7 +109,7 @@ const generatePages = () => recursive("notes/", (err, files) => {
             .replace(/NOTES/g, topic.notes.map(n => notePageLinkTag(n, topic.topic)).join(""))
 
         console.log(`Generating topic page for ${topic.topic} at ${__dirname + topicPageUrl(topic.topic)}`)
-        fs.outputFileSync(__dirname + topicPageUrl(topic.topic), html)
+        fs.outputFileSync(__dirname + "/" + topicPageUrl(topic.topic), html)
     }
 
     // generates a note page for each note found within the notes/ page
@@ -141,7 +141,7 @@ const generatePages = () => recursive("notes/", (err, files) => {
         }
 
         // console.log(`Generating note page for ${file}`)
-        fs.outputFileSync(__dirname + notePageUrl(file), html)
+        fs.outputFileSync(__dirname + "/" + notePageUrl(file), html)
     }
 })
 
