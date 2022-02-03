@@ -15,6 +15,7 @@
     "katex": "^0.15.2",
     "markdown-wasm": "^1.2.0",
     "recursive-readdir": "^2.2.2",
+    "spellchecker": "^3.7.1",
     "title-case": "^3.0.3"
   }
 }

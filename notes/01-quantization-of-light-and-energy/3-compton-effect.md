@@ -15,7 +15,7 @@ $$E_{initial}=E_{final} : E+m_ec^2=E'+E_e \newline p_{x, initial}=p_{x,final} : 
 
 This system of equations is not enough alone to be solved uniquely, so the scattered photon's energy and direction are measured to eliminate $E_e$ and $\phi$. After some algebra and rearranging, the relationship between the energy is as follows:
 
-$$\frac{1}{E'} - \frac{1}{E}=\frac{1}{m_ec^2}\left(1-cos{\theta}\right)$$
+$$\frac{1}{E'} - \frac{1}{E}=\frac{1}{m_ec^2}\left(1-\cos{\theta}\right)$$
 
 Or, equvillently:
 

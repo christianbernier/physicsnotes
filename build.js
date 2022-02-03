@@ -10,6 +10,9 @@ const katex = require('katex')
 const tc = require("title-case")
 const recursive = require("recursive-readdir")
 const matter = require('gray-matter')
+const spellchecker = require('spellchecker')
+
+const CHECK_SPELLING = true
 
 // Generates a date string given a date object
 // ex. Tuesday, February 1, 2022
@@ -17,17 +20,17 @@ const prettyDate = d => d.toLocaleString("en-US", { weekday: 'long', year: 'nume
 
 // Returns the filepath of the HTML note page, given its markdown filepath
 // ex. "notes/test/test-page.md" becomes "/public/test/test-page.html"
-const notePageUrl = mdFilepath => `/public/${mdFilepath.substring(6, mdFilepath.length - 3)}.html`
+const notePageUrl = mdFilepath => `${(process.env.NETLIFY) ? "" : "/public/" + mdFilepath.substring(6, mdFilepath.length - 3)}.html`
 
 // Returns the filepath of a topic page, given the topic
 // ex. "test-topic" becomes "/public/test-topic.html"
-const topicPageUrl = topic => `/public/${topic}.html`
+const topicPageUrl = topic => `${(process.env.NETLIFY) ? "" : "/public/" + topic}.html`
 
 // Generates the HTML link tag for a note page, from the corresponding topic page
-const notePageLinkTag = (note, topic) => `<a class="note-link" href="${__dirname}/public/${topic}/${note}.html">${tc.titleCase(note.substring(2).replace(/-/g, " "))}</a>`
+const notePageLinkTag = (note, topic) => `<a class="note-link" href="${(process.env.NETLIFY) ? "" : `${__dirname}/public/` + topic}/${note}.html">${tc.titleCase(note.substring(2).replace(/-/g, " "))}</a>`
 
 // Generates the HTMl link tag for a topic page, from the index page
-const topicPageLinkTag = topic => `<a class="topic-link" href="${__dirname}/public/${topic}.html">${tc.titleCase(topic.substring(3).replace(/-/g, " "))}</a>`
+const topicPageLinkTag = topic => `<a class="topic-link" href="${(process.env.NETLIFY) ? "" : `${__dirname}/public/` + topic}.html">${tc.titleCase(topic.substring(3).replace(/-/g, " "))}</a>`
 
 // Generates a list of topics found in the notes/ folder, and the notes associated with each topic
 const generateTopicStructure = files => {
@@ -88,8 +91,15 @@ const generatePages = () => recursive("notes/", (err, files) => {
     const template = fs.readFileSync("src/index-template.html", "utf8")
     const html = template.replace(/TOPIC_LINKS/g, topicStructure.map(t => topicPageLinkTag(t.topic)).join(""))
 
-    console.log(`Generating index page`)
+    // console.log(`Generating index page`)
     fs.outputFileSync(__dirname + "/public/index.html", html)
+
+    const cssFile = fs.readFileSync("src/styles.css", "utf8")
+    fs.outputFileSync(__dirname + "/public/styles.css", cssFile)
+    // console.log(`Generating styles.css`)
+
+    const images = fs.copySync("images", __dirname + "/public/images")
+    console.log(images)
 
     // generates a topic page for each topic found with notes in the notes/ folder
     for (const topic of topicStructure) {
@@ -98,7 +108,7 @@ const generatePages = () => recursive("notes/", (err, files) => {
             .replace(/TOPIC/g, tc.titleCase(topic.topic.substring(3).replace(/-/g, " ")))
             .replace(/NOTES/g, topic.notes.map(n => notePageLinkTag(n, topic.topic)).join(""))
 
-        console.log(`Generating topic page for ${topic.topic}`)
+        // console.log(`Generating topic page for ${topic.topic}`)
         fs.outputFileSync(__dirname + topicPageUrl(topic.topic), html)
     }
 
@@ -115,13 +125,22 @@ const generatePages = () => recursive("notes/", (err, files) => {
             .replace(/CONTENT/g, markdownAsHtml)
             .replace(/TITLE/g, noteContents.data.title)
             .replace(/TOPIC_NAME/g, tc.titleCase(topic.substring(3).replace(/-/g, " ")))
-            .replace(/TOPIC_LINK/g, `${__dirname}/public/${topic}.html`)
+            .replace(/TOPIC_LINK/g, `${(process.env.NETLIFY) ? "" : `${__dirname}/public/` + topic}.html`)
             .replace(/DATE/g, date)
-            .replace(/\$\$(.+?)\$\$/g, (_, latex) => katex.renderToString(latex.replace(/<\/?em>/g, "*"), { throwOnError: false, displayMode: true }))
-            .replace(/\$(.+?)\$/g, (_, latex) => katex.renderToString(latex.replace(/<\/?em>/g, "*"), { throwOnError: false }))
+            .replace(/\$\$(.+?)\$\$/g, (_, latex) => katex.renderToString(latex.replace(/<\/?em>/g, "*").replace(/<\/?del>/g, "~"), { throwOnError: false, displayMode: true }))
+            .replace(/\$(.+?)\$/g, (_, latex) => katex.renderToString(latex.replace(/<\/?em>/g, "*").replace(/<\/?del>/g, "~"), { throwOnError: false }))
             .replace(/!!(.*)!!/g, `<span class="special">$1</span>`)
 
-        console.log(`Generating note page for ${file}`)
+        if (CHECK_SPELLING) {
+            if (file.indexOf("test") === -1) {
+                for (const word of noteContents.content.replace(/\$(.+?)\$/g, "").split(" ")) {
+                    if (spellchecker.isMisspelled(word))
+                        console.log('\u001b[' + 31 + 'm' + `POSSIBLE SPELLING ERROR: "${word}" found in ${file}` + '\u001b[0m')
+                }
+            }
+        }
+
+        // console.log(`Generating note page for ${file}`)
         fs.outputFileSync(__dirname + notePageUrl(file), html)
     }
 })
