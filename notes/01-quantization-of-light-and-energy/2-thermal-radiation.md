@@ -45,11 +45,11 @@ $$I(\lambda)=\frac{c}{4}u(\lambda)$$
 
 To find the total intensity between two wavelengths $\lambda_1$ and $\lambda_2$, we use:
 
-$$I(\lambda_1 : \lambda_2) = \int_{\lambda_1}^{\lambda_2} I(\lambda) d\lambda$$
+$$I(\lambda_1 : \lambda_2) = \int_{\lambda_1}^{\lambda_2} I(\lambda)\,d\lambda$$
 
 The total emitted intensity is therefore
 
-$$I=\int_0^{\infty} I(\lambda) d\lambda$$
+$$I=\int_0^{\infty} I(\lambda) \,d\lambda$$
 
 ## Classical Theory of Thermal Radiation
 
@@ -58,13 +58,13 @@ Classical assumptions yield the following theories:
 1. Blackbody boxes are filled with standing waves (since there is no electric field inside a metal box)
 2. For a box of volume $V$, the following equation gives the number of standing waves:
 
-$$N(\lambda)d\lambda=\frac{8\pi V}{\lambda^4} d\lambda$$
+$$N(\lambda)\,d\lambda=\frac{8\pi V}{\lambda^4} \,d\lambda$$
 
 3. Each wave contributes an average energy of $kT$ to the radiation in the box.
 
 Therefore, classical physics calculates the total energy density of radiation as follows:
 
-$$u(\lambda) d\lambda = \frac{N(\lambda)d\lambda}{V} kT=\frac{8\pi}{\lambda^4}kTd\lambda$$
+$$u(\lambda) \,d\lambda = \frac{N(\lambda)\,d\lambda}{V} kT=\frac{8\pi}{\lambda^4}kT\,d\lambda$$
 
 And the intensity per unit wavelength (Rayleigh-Jeans formula):
 

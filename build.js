@@ -21,10 +21,10 @@ const notePageUrl = mdFilepath => `/public/${mdFilepath.substring(6, mdFilepath.
 const topicPageUrl = topic => `/public/${topic}.html`
 
 // Generates the HTML link tag for a note page, from the corresponding topic page
-const notePageLinkTag = (note, topic) => `<a class="note-link" href="${__dirname}/public/${topic}/${note}.html">${tc.titleCase(note.replace(/-/g, " "))}</a>`
+const notePageLinkTag = (note, topic) => `<a class="note-link" href="${__dirname}/public/${topic}/${note}.html">${tc.titleCase(note.substring(2).replace(/-/g, " "))}</a>`
 
 // Generates the HTMl link tag for a topic page, from the index page
-const topicPageLinkTag = topic => `<a class="topic-link" href="${__dirname}/public/${topic}.html">${tc.titleCase(topic.replace(/-/g, " "))}</a>`
+const topicPageLinkTag = topic => `<a class="topic-link" href="${__dirname}/public/${topic}.html">${tc.titleCase(topic.substring(3).replace(/-/g, " "))}</a>`
 
 // Generates a list of topics found in the notes/ folder, and the notes associated with each topic
 const generateTopicStructure = files => {
@@ -70,6 +70,14 @@ const generatePages = () => recursive("notes/", (err, files) => {
         return
     }
 
+    // ensures topics and notes are in the correct order
+    // note: topic folders are given names such as "/00-relativity/"
+    // and notes are given names such as "2-twin-paradox.md"
+    // so that they are displayed in the correct order. anywhere with
+    // substring(2) or substring(3) is simply getting rid of that for
+    // displaying to the user
+    files.sort((a, b) => a < b);
+
     // uses the list of all note files to generate the topic structure
     const topicStructure = generateTopicStructure(files)
 
@@ -84,7 +92,7 @@ const generatePages = () => recursive("notes/", (err, files) => {
     for (const topic of topicStructure) {
         const template = fs.readFileSync("src/topic-template.html", "utf8")
         const html = template
-            .replace(/TOPIC/g, tc.titleCase(topic.topic.replace(/-/g, " ")))
+            .replace(/TOPIC/g, tc.titleCase(topic.topic.substring(3).replace(/-/g, " ")))
             .replace(/NOTES/g, topic.notes.map(n => notePageLinkTag(n, topic.topic)).join(""))
 
         console.log(`Generating topic page for ${topic.topic}`)
@@ -103,7 +111,7 @@ const generatePages = () => recursive("notes/", (err, files) => {
         const html = template
             .replace(/CONTENT/g, markdownAsHtml)
             .replace(/TITLE/g, noteContents.data.title)
-            .replace(/TOPIC_NAME/g, tc.titleCase(topic.replace(/-/g, " ")))
+            .replace(/TOPIC_NAME/g, tc.titleCase(topic.substring(3).replace(/-/g, " ")))
             .replace(/TOPIC_LINK/g, `${__dirname}/public/${topic}.html`)
             .replace(/DATE/g, date)
             .replace(/\$\$(.+?)\$\$/g, (_, latex) => katex.renderToString(latex.replace(/<\/?em>/g, "*"), { throwOnError: false, displayMode: true }))

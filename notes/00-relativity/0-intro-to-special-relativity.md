@@ -58,4 +58,46 @@ Due to the constancy of the speed of light, Galilean transformations do not suff
 
 ## The Special Theory of Relativity
 
-Need to add information from chapter 2.4 here.
+### Time dilation
+
+Since light moves at the same speed for all inertial observers, a stationary observer relative to a moving one will perceive time passing slower for the moving observer. In the image below, observer $O$ sees the light moving a distance $2L$ (therefore taking $\Delta t=\frac{2L}{c}$), whereas observer $O'$ sees the light travelling a distance $2L_0$ (therefore taking $\Delta t'=\frac{2L_0}{c}$). Since $L\gt L_0$, $\Delta t \gt \Delta t'$.
+
+![Diagram of time dilation](../../public/images/time-dilation.png)
+
+This effect, called **time dilation** is described by the following equation, where $\Delta t$ is the time measured by the observer $O$ and $\Delta t_0$ is the time measured by observer $O'$:
+
+$$\Delta t = \frac{\Delta t_0}{\sqrt{1-\frac{u^2}{c^2}}}$$
+
+$\Delta t_0$, called the **proper time**, is the time as measured such that the *location* of the object does not change with respect to what the observer are measuring. For example, for the image above, the proper time would be the time that observer $O'$ measures, since they do not move with respect to the clock.
+
+### Length contraction
+
+Similarly, for an object moving away from an observer, light needs to travel a shorter distance than it would need to if the object were stationary (see image below).
+
+![Diagram of length contraction](../../public/images/length-contraction.png)
+
+This results in the effect known as **length contraction**, which is described by the equation below:
+
+$$L=L_0\sqrt{1-\frac{u^2}{c^2}}$$
+
+Stationary observers always measure objects moving to be shorter than they would be if they were stationary. The **proper length**, $L_0$, is the length measured at the same instant in time, by the observer not moving with respect to the object.
+
+### Simulteneity
+
+Due to the effects of length contraction and time dilation, events that appear to be simultaneous to one observer are not necessarily simultaneous to another.
+
+!!Simulteneity is relative!!
+
+### Relativistic velocity addition
+
+Due to the effects of length contraction and time dilation, velocities do not simply add together in special relativity. If they did, objects moving very fast relative to other objects moving very fast could move faster than the speed of light. To correct for this, the following equation is used:
+
+$$v=\frac{v'+u}{1+\frac{v'u}{c^2}}$$
+
+Note: when either $v'$ or $u$ equals the speed of light, $v$ also equals the speed of light, regardless of the other velocity.
+
+### Relativistic doppler shift
+
+Because of a lack of reference medium for light, classical doppler shift does not work when analyzing light. Instead, the relativstic doppler shift equation is used:
+
+$$f'=f\sqrt{\frac{1-\frac{u}{c}}{1+\frac{u}{c}}}$$

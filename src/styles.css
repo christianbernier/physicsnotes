@@ -78,7 +78,7 @@ span.special {
     margin: 0;
     padding: 20px 0;
     border-radius: 4px;
-    padding: 5px 10px;
+    padding: 15px;
     height: fit-content;
 }
 
@@ -88,12 +88,12 @@ span.special::before {
     background-size: 40px 40px;
     width: 40px;
     height: 40px;
-    margin: 10px 10px 10px 5px;
+    margin: 10px 25px 10px 5px;
     display: inline-block;
 }
 
 p > span.special {
-    font-weight: 700;
+    font-style: italic;
 }
 
 
@@ -133,4 +133,10 @@ body {
 
 #v-spacer {
     height: 100px;
+}
+
+
+/* Other styles */
+img {
+    max-width: 100%;
 }
