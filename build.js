@@ -12,7 +12,7 @@ const recursive = require("recursive-readdir")
 const matter = require('gray-matter')
 const spellchecker = require('spellchecker')
 
-const CHECK_SPELLING = true
+const CHECK_SPELLING = false
 
 // Generates a date string given a date object
 // ex. Tuesday, February 1, 2022
@@ -120,7 +120,7 @@ const generatePages = () => recursive("notes/", (err, files) => {
         const topic = file.split("/")[1]
         const template = fs.readFileSync("src/note-template.html", "utf8")
         const noteContents = matter(fs.readFileSync(file, "utf8"))
-        const markdownAsHtml = markdown.parse(noteContents.content.replace(/\$\$/g, "$$$$$$"))
+        const markdownAsHtml = markdown.parse(noteContents.content.replace(/\$\$/g, "$$$$$$").replace(/\.\.\/\.\.\/public/g, "../"))
         const date = prettyDate(noteContents.data.date)
         const html = template
             .replace(/CONTENT/g, markdownAsHtml)
