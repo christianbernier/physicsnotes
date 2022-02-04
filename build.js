@@ -20,11 +20,10 @@ const prettyDate = d => d.toLocaleString("en-US", { weekday: 'long', year: 'nume
 
 // Returns the filepath of the HTML note page, given its markdown filepath
 // ex. "notes/test/test-page.md" becomes "/public/test/test-page.html"
-const notePageUrl = mdFilepath => `${((process.env.NETLIFY) ? "" : "/public/") + mdFilepath.substring(6, mdFilepath.length - 3)}.html`
+const notePageUrl = mdFilepath => `/public/${mdFilepath.substring(6, mdFilepath.length - 3)}.html`
 
 // Returns the filepath of a topic page, given the topic
 // ex. "test-topic" becomes "/public/test-topic.html"
-// const topicPageUrl = topic => `${((process.env.NETLIFY) ? "" : "/public/") + topic}.html`
 const topicPageUrl = topic => `/public/${topic}.html`
 
 // Generates the HTML link tag for a note page, from the corresponding topic page
