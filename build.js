@@ -7,10 +7,10 @@
 const fs = require('fs-extra')
 const markdown = require("markdown-wasm")
 const katex = require('katex')
+const spellchecker = require('spellchecker')
 const tc = require("title-case")
 const recursive = require("recursive-readdir")
 const matter = require('gray-matter')
-const spellchecker = require('spellchecker')
 
 const CHECK_SPELLING = false
 
@@ -132,13 +132,13 @@ const generatePages = () => recursive("notes/", (err, files) => {
             .replace(/\$(.+?)\$/g, (_, latex) => katex.renderToString(latex.replace(/<\/?em>/g, "*").replace(/<\/?del>/g, "~"), { throwOnError: false }))
             .replace(/!!(.*)!!/g, `<span class="special">$1</span>`)
 
-        if (CHECK_SPELLING) {
-            if (file.indexOf("test") === -1) {
-                let fileContentsWithoutLatex = noteContents.content.replace(/\$(.+?)\$/g, "").replace(/[^a-zA-Z]/g, " ").split(" ")
-                for (const word of fileContentsWithoutLatex) {
-                    if (spellchecker.isMisspelled(word))
-                        console.log('\u001b[' + 31 + 'm' + `POSSIBLE SPELLING ERROR: "${word}" found in ${file}` + '\u001b[0m')
-                }
+        if (CHECK_SPELLING && file.indexOf("test") === -1) {
+            // get rid of latex and punctuation
+            let wordsInFile = noteContents.content.replace(/\$(.+?)\$/g, "").replace(/[^a-zA-Z]/g, " ").split(" ")
+            for (const word of wordsInFile) {
+                // if the word is misspelt, console.log it in red
+                if (spellchecker.isMisspelled(word))
+                    console.log('\u001b[' + 31 + 'm' + `POSSIBLE SPELLING ERROR: "${word}" found in ${file}` + '\u001b[0m')
             }
         }
 
