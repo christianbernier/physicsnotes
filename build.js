@@ -126,7 +126,7 @@ const generatePages = () => recursive("notes/", (err, files) => {
             .replace(/CONTENT/g, markdownAsHtml)
             .replace(/TITLE/g, noteContents.data.title)
             .replace(/TOPIC_NAME/g, tc.titleCase(topic.substring(3).replace(/-/g, " ")))
-            .replace(/TOPIC_LINK/g, `${((process.env.NETLIFY) ? "" : `${__dirname}/public/`) + topic}.html`)
+            .replace(/TOPIC_LINK/g, `../${topic}.html`)
             .replace(/DATE/g, date)
             .replace(/\$\$(.+?)\$\$/g, (_, latex) => katex.renderToString(latex.replace(/<\/?em>/g, "*").replace(/<\/?del>/g, "~"), { throwOnError: false, displayMode: true }))
             .replace(/\$(.+?)\$/g, (_, latex) => katex.renderToString(latex.replace(/<\/?em>/g, "*").replace(/<\/?del>/g, "~"), { throwOnError: false }))
