@@ -24,7 +24,8 @@ const notePageUrl = mdFilepath => `${((process.env.NETLIFY) ? "" : "/public/") +
 
 // Returns the filepath of a topic page, given the topic
 // ex. "test-topic" becomes "/public/test-topic.html"
-const topicPageUrl = topic => `${((process.env.NETLIFY) ? "" : "/public/") + topic}.html`
+// const topicPageUrl = topic => `${((process.env.NETLIFY) ? "" : "/public/") + topic}.html`
+const topicPageUrl = topic => `/public/${topic}.html`
 
 // Generates the HTML link tag for a note page, from the corresponding topic page
 const notePageLinkTag = (note, topic) => `<a class="note-link" href="${((process.env.NETLIFY) ? "" : `${__dirname}/public/`) + topic}/${note}.html">${tc.titleCase(note.substring(2).replace(/-/g, " "))}</a>`
@@ -109,8 +110,8 @@ const generatePages = () => recursive("notes/", (err, files) => {
             .replace(/NOTES/g, topic.notes.map(n => notePageLinkTag(n, topic.topic)).join(""))
 
         console.log(`Generating topic page for ${topic.topic} at ${__dirname + topicPageUrl(topic.topic)}`)
-        fs.outputFileSync(`${((process.env.NETLIFY) ? "" : "/public/") + topic.topic}.html`, html)
-        // fs.outputFileSync(((process.env.NETLIFY) ? "" : __dirname) + topicPageUrl(topic.topic), html)
+        // fs.outputFileSync(`${((process.env.NETLIFY) ? "/public/" : "/public/") + topic.topic}.html`, html)
+        fs.outputFileSync(__dirname + topicPageUrl(topic.topic), html)
     }
 
     // generates a note page for each note found within the notes/ page
