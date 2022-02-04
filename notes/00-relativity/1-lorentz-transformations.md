@@ -23,7 +23,7 @@ The Lorentz velocity transformations are:
 
 $$v_x'=\frac{v_x-u}{1-\frac{v_xu}{c^2}} \newline v_y'=\frac{v_y\sqrt{1-\frac{u^2}{c^2}}}{1-\frac{v_xu}{c^2}} \newline v_z'=\frac{v_z\sqrt{1-\frac{u^2}{c^2}}}{1-\frac{v_xu}{c^2}}$$
 
-For small velocities, $u$, the equation for the x-velocity reduces to the Galilean transformation, but the y- and z- velocities do not becuase of how Lorentz transformations treat time.
+For small velocities, $u$, the equation for the x-velocity reduces to the Galilean transformation, but the y- and z- velocities do not because of how Lorentz transformations treat time.
 
 The Lorentz time transformation is:
 
@@ -31,7 +31,7 @@ $$dt'=\frac{dt-\left(\frac{u}{c^2}\right)dx}{\sqrt{1-\frac{u^2}{c^2}}}$$
 
 ## Consequences of Lorentz Transformations
 
-### Simuletenity
+### Simultaneity
 
 Events that appear to be simultaneous for one observer are not simultaneous for another observer moving relative to the other, but not due to time dilation.
 

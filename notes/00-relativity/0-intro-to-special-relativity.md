@@ -9,7 +9,7 @@ date: 2022-01-18
 
 In general, the concept of **relativity** allows observers in different *frames of reference* to compare observations of phenomena.
 
-**Intertial frames of reference** are those that do not involve any rotation or acceleration, where all of Newton's laws apply. Examples of an inertial frame of reference would be floating in a nonrotating rocket in interstellar space, away from any meaningful effects of gravity. The surface of Earth is sometimes accepted as close enough to inertial for some observations, but observers are still subject to Earth's gravitational force and rotation.
+**Inertial frames of reference** are those that do not involve any rotation or acceleration, where all of Newton's laws apply. Examples of an inertial frame of reference would be floating in a non-rotating rocket in interstellar space, away from any meaningful effects of gravity. The surface of Earth is sometimes accepted as close enough to inertial for some observations, but observers are still subject to Earth's gravitational force and rotation.
 
 A **transformation** describes how to change observations from one frame of reference into another. Transformations are often expressed as a system of equations, comparing two observers' (often denoted $O$ and $O'$) perceived location in spacetime, $(x, y, z, t)$.
 
@@ -60,7 +60,7 @@ Due to the constancy of the speed of light, Galilean transformations do not suff
 
 ### Time dilation
 
-Since light moves at the same speed for all inertial observers, a stationary observer relative to a moving one will perceive time passing slower for the moving observer. In the image below, observer $O$ sees the light moving a distance $2L$ (therefore taking $\Delta t=\frac{2L}{c}$), whereas observer $O'$ sees the light travelling a distance $2L_0$ (therefore taking $\Delta t'=\frac{2L_0}{c}$). Since $L\gt L_0$, $\Delta t \gt \Delta t'$.
+Since light moves at the same speed for all inertial observers, a stationary observer relative to a moving one will perceive time passing slower for the moving observer. In the image below, observer $O$ sees the light moving a distance $2L$ (therefore taking $\Delta t=\frac{2L}{c}$), whereas observer $O'$ sees the light traveling a distance $2L_0$ (therefore taking $\Delta t'=\frac{2L_0}{c}$). Since $L\gt L_0$, $\Delta t \gt \Delta t'$.
 
 ![Diagram of time dilation](../../public/images/time-dilation.png)
 
@@ -82,11 +82,11 @@ $$L=L_0\sqrt{1-\frac{u^2}{c^2}}$$
 
 Stationary observers always measure objects moving to be shorter than they would be if they were stationary. The **proper length**, $L_0$, is the length measured at the same instant in time, by the observer not moving with respect to the object.
 
-### Simulteneity
+### Simultaneity
 
 Due to the effects of length contraction and time dilation, events that appear to be simultaneous to one observer are not necessarily simultaneous to another.
 
-!!Simulteneity is relative!!
+!!Simultaneity is relative!!
 
 ### Relativistic velocity addition
 
@@ -98,6 +98,6 @@ Note: when either $v'$ or $u$ equals the speed of light, $v$ also equals the spe
 
 ### Relativistic doppler shift
 
-Because of a lack of reference medium for light, classical doppler shift does not work when analyzing light. Instead, the relativstic doppler shift equation is used:
+Because of a lack of reference medium for light, classical doppler shift does not work when analyzing light. Instead, the relativistic doppler shift equation is used:
 
 $$f'=f\sqrt{\frac{1-\frac{u}{c}}{1+\frac{u}{c}}}$$

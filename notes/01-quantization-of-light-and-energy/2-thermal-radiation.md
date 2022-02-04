@@ -5,7 +5,7 @@ date: 2022-02-01
 
 ## What is Thermal Radiation?
 
-Thermal radiation is the electromagnetic radiation emitted by all objects becuase of their temperature.
+Thermal radiation is the electromagnetic radiation emitted by all objects because of their temperature.
 
 Thermal radiation is usually in the infrared region, but sometimes objects are so hot that their radiation is visible light.
 
@@ -74,7 +74,7 @@ This equation results in the prediction that wavelengths decrease to $0$ as the 
 
 ## Quantum Theory of Thermal Radiation
 
-Max Planck tried to fix the ultraviolet catasrophe, and used a new physical theory called **quantum physics**, led by **wave mechanics** also known as **quantum mechanics**.
+Max Planck tried to fix the ultraviolet catastrophe, and used a new physical theory called **quantum physics**, led by **wave mechanics** also known as **quantum mechanics**.
 
 Quantum physics is based on the idea that an oscillating atom can absorb and emit energy only as discrete bundles.
 
@@ -104,7 +104,7 @@ The intensity of the radiation becomes
 
 $$I(\lambda) = \frac{c}{4}\left(\frac{8\pi}{\lambda^4}\right)\left[\frac{hc/\lambda}{e^{hc/\lambda kT} - 1}\right]=\frac{2\pi hc^2}{\lambda^5}\frac{1}{e^{hc/\lambda kT} - 1}$$
 
-The relationship between the stefan-Boltzmann constant and Planck's constant:
+The relationship between the Stefan-Boltzmann constant and Planck's constant:
 
 $$\sigma=\frac{2\pi^5k^4}{15c^2h^3}$$
 

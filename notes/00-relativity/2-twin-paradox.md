@@ -15,7 +15,7 @@ When observer $O'$ returns to Earth, who would be younger? Observer $O$ would cl
 
 ### Why the setup does not make sense
 
-The twin paradox is not actually a paradox. The issue lies in how the situation is framed. It is not possible for observer $O'$ to remain in an inertial reference frame for the entire jouney since they must, at some point, turn around and come back to Earth. Therefore, at some point they accelerated and the laws of physics no longer applied the same.
+The twin paradox is not actually a paradox. The issue lies in how the situation is framed. It is not possible for observer $O'$ to remain in an inertial reference frame for the entire journey since they must, at some point, turn around and come back to Earth. Therefore, at some point they accelerated and the laws of physics no longer applied the same.
 
 ### Who would actually be younger?
 

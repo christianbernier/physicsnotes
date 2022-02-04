@@ -17,7 +17,7 @@ This system of equations is not enough alone to be solved uniquely, so the scatt
 
 $$\frac{1}{E'} - \frac{1}{E}=\frac{1}{m_ec^2}\left(1-\cos{\theta}\right)$$
 
-Or, equvillently:
+Or, equivalently:
 
 $$\lambda'-\lambda=\frac{h}{m_ec}\left(1-\cos{\theta}\right)$$
 

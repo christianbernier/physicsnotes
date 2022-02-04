@@ -12,7 +12,7 @@ const recursive = require("recursive-readdir")
 const matter = require('gray-matter')
 const spellchecker = require('spellchecker')
 
-const CHECK_SPELLING = false
+const CHECK_SPELLING = true
 
 // Generates a date string given a date object
 // ex. Tuesday, February 1, 2022
@@ -91,15 +91,16 @@ const generatePages = () => recursive("notes/", (err, files) => {
     const template = fs.readFileSync("src/index-template.html", "utf8")
     const html = template.replace(/TOPIC_LINKS/g, topicStructure.map(t => topicPageLinkTag(t.topic)).join(""))
 
-    // console.log(`Generating index page`)
+    console.log(`Generating index page`)
     fs.outputFileSync(__dirname + "/public/index.html", html)
 
     const cssFile = fs.readFileSync("src/styles.css", "utf8")
+    console.log(`Generating styles.css`)
     fs.outputFileSync(__dirname + "/public/styles.css", cssFile)
-    // console.log(`Generating styles.css`)
 
-    const images = fs.copySync("images", __dirname + "/public/images")
-    console.log(images)
+    // copies images to the public/ folder
+    console.log(`Copying images to public/`)
+    fs.copySync("images", __dirname + "/public/images")
 
     // generates a topic page for each topic found with notes in the notes/ folder
     for (const topic of topicStructure) {
@@ -109,7 +110,6 @@ const generatePages = () => recursive("notes/", (err, files) => {
             .replace(/NOTES/g, topic.notes.map(n => notePageLinkTag(n, topic.topic)).join(""))
 
         console.log(`Generating topic page for ${topic.topic} at ${__dirname + topicPageUrl(topic.topic)}`)
-        // fs.outputFileSync(`${((process.env.NETLIFY) ? "/public/" : "/public/") + topic.topic}.html`, html)
         fs.outputFileSync(__dirname + topicPageUrl(topic.topic), html)
     }
 
@@ -128,20 +128,21 @@ const generatePages = () => recursive("notes/", (err, files) => {
             .replace(/TOPIC_NAME/g, tc.titleCase(topic.substring(3).replace(/-/g, " ")))
             .replace(/TOPIC_LINK/g, `../${topic}.html`)
             .replace(/DATE/g, date)
-            .replace(/\$\$(.+?)\$\$/g, (_, latex) => katex.renderToString(latex.replace(/<\/?em>/g, "*").replace(/<\/?del>/g, "~"), { throwOnError: false, displayMode: true }))
+            .replace(/\$\$(.+?)\$\$/g, (_, latex) => katex.renderToString(latex.replace(/<\/?em>/g, "*").replace(/<\/?del>/g, "~"), { throwOnError: false, displayMode: true, strict: ec => ec !== "newLineInDisplayMode" }))
             .replace(/\$(.+?)\$/g, (_, latex) => katex.renderToString(latex.replace(/<\/?em>/g, "*").replace(/<\/?del>/g, "~"), { throwOnError: false }))
             .replace(/!!(.*)!!/g, `<span class="special">$1</span>`)
 
         if (CHECK_SPELLING) {
             if (file.indexOf("test") === -1) {
-                for (const word of noteContents.content.replace(/\$(.+?)\$/g, "").split(" ")) {
+                let fileContentsWithoutLatex = noteContents.content.replace(/\$(.+?)\$/g, "").replace(/[^a-zA-Z]/g, " ").split(" ")
+                for (const word of fileContentsWithoutLatex) {
                     if (spellchecker.isMisspelled(word))
                         console.log('\u001b[' + 31 + 'm' + `POSSIBLE SPELLING ERROR: "${word}" found in ${file}` + '\u001b[0m')
                 }
             }
         }
 
-        // console.log(`Generating note page for ${file}`)
+        console.log(`Generating note page for ${file}`)
         fs.outputFileSync(__dirname + notePageUrl(file), html)
     }
 })

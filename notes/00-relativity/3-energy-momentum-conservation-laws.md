@@ -9,7 +9,7 @@ Dynamical quantities such as energy and momentum rely on length and time, and so
 
 ### Momentum
 
-Momentum is classicaly defined as $\boldsymbol{\overrightarrow{p}}=m\boldsymbol{\overrightarrow{v}}$. An observer moving with respect to a collision would believe that momentum was not conserved due to relativistic effects.
+Momentum is classically defined as $\boldsymbol{\overrightarrow{p}}=m\boldsymbol{\overrightarrow{v}}$. An observer moving with respect to a collision would believe that momentum was not conserved due to relativistic effects.
 
 The equation for momentum must suffice two criteria:
 
@@ -75,7 +75,7 @@ Classical collisions:
 
 Relativistic collisions:
 
-- Inernal stored energy contributes to rest energy
+- Internal stored energy contributes to rest energy
 - Total energy consists of kinetic energy and rest energy
 - The total amount of energy does not change
 
