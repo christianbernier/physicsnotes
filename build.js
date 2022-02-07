@@ -27,10 +27,10 @@ const notePageUrl = mdFilepath => `/public/${mdFilepath.substring(6, mdFilepath.
 const topicPageUrl = topic => `/public/${topic}.html`
 
 // Generates the HTML link tag for a note page, from the corresponding topic page
-const notePageLinkTag = (note, topic) => `<a class="note-link" href="${((process.env.NETLIFY) ? "" : `${__dirname}/public/`) + topic}/${note}.html">${tc.titleCase(note.substring(2).replace(/-/g, " "))}</a>`
+const notePageLinkTag = (note, topic) => `<a class="note-link" href="${((process.env.NETLIFY) ? "" : `${__dirname}/public/`) + topic}/${note}.html">${tc.titleCase(note.substring(2).replace(/_/g, " "))}</a>`
 
 // Generates the HTMl link tag for a topic page, from the index page
-const topicPageLinkTag = topic => `<a class="topic-link" href="${((process.env.NETLIFY) ? "" : `${__dirname}/public/`) + topic}.html">${tc.titleCase(topic.substring(3).replace(/-/g, " "))}</a>`
+const topicPageLinkTag = topic => `<a class="topic-link" href="${((process.env.NETLIFY) ? "" : `${__dirname}/public/`) + topic}.html">${tc.titleCase(topic.substring(3).replace(/_/g, " "))}</a>`
 
 // Generates a list of topics found in the notes/ folder, and the notes associated with each topic
 const generateTopicStructure = files => {
@@ -106,7 +106,7 @@ const generatePages = () => recursive("notes/", (err, files) => {
     for (const topic of topicStructure) {
         const template = fs.readFileSync("src/topic-template.html", "utf8")
         const html = template
-            .replace(/TOPIC/g, tc.titleCase(topic.topic.substring(3).replace(/-/g, " ")))
+            .replace(/TOPIC/g, tc.titleCase(topic.topic.substring(3).replace(/_/g, " ")))
             .replace(/NOTES/g, topic.notes.map(n => notePageLinkTag(n, topic.topic)).join(""))
 
         console.log(`Generating topic page for ${topic.topic} at ${__dirname + topicPageUrl(topic.topic)}`)
@@ -125,7 +125,7 @@ const generatePages = () => recursive("notes/", (err, files) => {
         const html = template
             .replace(/CONTENT/g, markdownAsHtml)
             .replace(/TITLE/g, noteContents.data.title)
-            .replace(/TOPIC_NAME/g, tc.titleCase(topic.substring(3).replace(/-/g, " ")))
+            .replace(/TOPIC_NAME/g, tc.titleCase(topic.substring(3).replace(/_/g, " ")))
             .replace(/TOPIC_LINK/g, `../${topic}.html`)
             .replace(/DATE/g, date)
             .replace(/\$\$(.+?)\$\$/g, (_, latex) => katex.renderToString(latex.replace(/<\/?em>/g, "*").replace(/<\/?del>/g, "~"), { throwOnError: false, displayMode: true, strict: ec => ec !== "newLineInDisplayMode" }))

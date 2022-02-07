@@ -1,5 +1,5 @@
 ---
-title: Both a Particle and Wave
+title: Wave-Particle Duality
 date: 2022-02-02
 ---
 
@@ -9,8 +9,8 @@ Some experiments (interference, diffraction) seem to suggest that light behaves 
 
 The wave and particle properties of light are one; it is not possible to separate the light into particles and waves.
 
-## Particle-Wave Duality
+## Wave-Particle Duality
 
 Light does not "come" in waves nor particles. Simply, it interacts with matter in ways that resemble both waves and particles in different situations.
 
-The same particle-wave duality is seen in other objects (like electrons), which were previously believed to be only particles.
+The same wave-particle duality is seen in other objects (like electrons), which were previously believed to be only particles.
