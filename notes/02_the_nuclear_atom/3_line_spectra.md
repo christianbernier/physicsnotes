@@ -13,7 +13,7 @@ When white light (with all wavelengths of light) is passed through a gas, some w
 
 ## Hydrogen's Spectra
 
-Johann Balmer noticed that hyrogen's emission lines follow the following formula quite closely:
+Johann Balmer noticed that hydrogen's emission lines follow the following formula quite closely:
 
 $$\lambda=\left(364.5nm\right)\frac{n^2}{n^2-4}$$
 

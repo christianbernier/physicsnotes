@@ -11,11 +11,11 @@ While not correct in its description of the actual structure of atoms, Bohr's mo
 
 ### Forces
 
-In a hydrogen atom, there is one electron (with negative electric charge) and a nucleus (with positive elelctric charge). The attractive force, the electrostatic Coulomb force, provides centripetal acceleration $v^2/r$, meaning
+In a hydrogen atom, there is one electron (with negative electric charge) and a nucleus (with positive electric charge). The attractive force, the electrostatic Coulomb force, provides centripetal acceleration $v^2/r$, meaning
 
 $$F=\frac{1}{4\pi\epsilon_0}\frac{\left|q_1\right|\left|q_2\right|}{r^2}=\frac{1}{4\pi\epsilon_0}\frac{e^2}{r^2}=\frac{mv^2}{r}$$
 
-If you assume the nucleus stays at rest (since it is so much more massive than the electons), the kinetic energy of the electron is
+If you assume the nucleus stays at rest (since it is so much more massive than the electrons), the kinetic energy of the electron is
 
 $$K=\frac{1}{2}mv^2=\frac{1}{8\pi\epsilon_0}\frac{e^2}{r}$$
 
@@ -33,7 +33,7 @@ One of the major problems with the Bohr model is that an electron orbiting as Bo
 
 Bohr predicted there were certain stable orbits in an atom, called **stationary states**, where the electron would not radiate electromagnetic energy.
 
-Stationary states, Bohr predicted, occured when the angular momentum, $L$, of the electron is integer multiples of $\hslash$, such as $\hslash, 2\hslash, 3\hslash$. This is called the *quantization of angular momentum*.
+Stationary states, Bohr predicted, occurred when the angular momentum, $L$, of the electron is integer multiples of $\hslash$, such as $\hslash, 2\hslash, 3\hslash$. This is called the *quantization of angular momentum*.
 
 Since $\boldsymbol{\overrightarrow{L}}=\boldsymbol{\overrightarrow{r}}\times\boldsymbol{\overrightarrow{p}}$, and since the position vector, $\boldsymbol{\overrightarrow{r}}$, is perpendicular to the linear momentum of the electron, $\boldsymbol{\overrightarrow{p}}$, for its orbit, the magnitude of angular momentum is simply $L=rp=mvr$. Therefore, Bohr postulated that
 
@@ -97,7 +97,7 @@ Combining these two equations gives
 
 $$f_{n_3\rightarrow n_2}+f_{n_2\rightarrow n_1}=cR_\infty \left(\frac{1}{n_3^2}-\frac{1}{n_2^2}\right)+cR_\infty \left(\frac{1}{n_2^2}-\frac{1}{n_1^2}\right)=cR_\infty \left(\frac{1}{n_3^2}-\frac{1}{n_1^2}\right)=f_{n_3\rightarrow n_1}$$
 
-Since this also works with energies, the amount of energy emitted by "skipping" energy levels is the same as would be emitted if the electron went down each energy level individually. And since atoms are typically found in their ground states, that is why absorption spectra are not the same as emission spectra: the absorption spectrum only shows tranistions from the ground state.
+Since this also works with energies, the amount of energy emitted by "skipping" energy levels is the same as would be emitted if the electron went down each energy level individually. And since atoms are typically found in their ground states, that is why absorption spectra are not the same as emission spectra: the absorption spectrum only shows transitions from the ground state.
 
 ## Atoms with $Z\gt 1$
 
