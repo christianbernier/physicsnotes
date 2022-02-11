@@ -12,7 +12,7 @@ const tc = require("title-case")
 const recursive = require("recursive-readdir")
 const matter = require('gray-matter')
 
-const CHECK_SPELLING = true
+const CHECK_SPELLING = false
 
 // Generates a date string given a date object
 // ex. Tuesday, February 1, 2022
