@@ -53,7 +53,7 @@ Issues arise when trying to measure *which* of the two slits a particle passes t
 
 By measuring particle-properties like which slit the particle passes through, we only investigate the particle aspects and thus cannot observe the wave aspects. Conversely, when studying the wave aspects, we cannot observe the particle aspects.
 
-!!The electron behaves as a wave *or* a particle, but never both simultaneously.!!
+!!The electron behaves as a wave or a particle, but never both simultaneously.!!
 
 ### Principle of complementarity
 

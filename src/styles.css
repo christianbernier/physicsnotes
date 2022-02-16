@@ -87,7 +87,7 @@ span.special::before {
     content:"";
     background-image:url(../images/lightbulb.png) !important;
     background-size: 40px 40px;
-    width: 40px;
+    min-width: 40px;
     height: 40px;
     margin: 10px 25px 10px 5px;
     display: inline-block;

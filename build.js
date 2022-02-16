@@ -120,7 +120,11 @@ const generatePages = () => recursive("notes/", (err, files) => {
         const topic = file.split("/")[1]
         const template = fs.readFileSync("src/note-template.html", "utf8")
         const noteContents = matter(fs.readFileSync(file, "utf8"))
-        const markdownAsHtml = markdown.parse(noteContents.content.replace(/\$\$/g, "$$$$$$").replace(/\.\.\/\.\.\/public/g, ".."))
+        const markdownAsHtml = markdown.parse(
+            noteContents.content
+            .replace(/_/g, "\\_")
+            .replace(/\$\$/g, "$$$$$$")
+            .replace(/\.\.\/\.\.\/public/g, ".."))
         const date = prettyDate(noteContents.data.date)
         const html = template
             .replace(/CONTENT/g, markdownAsHtml)
