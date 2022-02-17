@@ -41,6 +41,7 @@ const generateTopicStructure = files => {
         // into fileTopic = "relativity"
         // and  fileTitle = "conservation-laws"
         const fileStructure = file.split("/")
+        if(fileStructure.length < 3) continue
         const fileTopic = fileStructure[1]
         const fileTitle = fileStructure[2].split(".")[0]
 

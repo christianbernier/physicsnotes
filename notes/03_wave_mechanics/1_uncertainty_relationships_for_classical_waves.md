@@ -11,8 +11,6 @@ In quantum mechanics, the amplitude of a de Broglie wave describes its position 
 
 Real waves can be described as *wave packets*, which are disturbances localized to a region in space. Wave packets occupy a small region of space, $\Delta x$, but it is difficult to determine exactly what the wavelength is because it has no definitive beginning or end. This uncertainty, $\Delta \lambda$, can be represented as a fraction, $\epsilon$, of the wavelength: $\Delta \lambda \sim \epsilon \lambda$. The fraction $\epsilon$ is certainly less than $1$, but is probably greater than $0.01$, so it is approximated as $\epsilon \sim 0.1$ within an order of magnitude.
 
-!!The symbol $\sim$ represents an estimate within about an order of magnitude!!
-
 ![Wave uncertainty principle](../../images/wave-uncertainty-principle.jpeg)
 
 Since $\Delta x \approx \lambda$, we know
