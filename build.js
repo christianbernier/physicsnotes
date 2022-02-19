@@ -31,7 +31,7 @@ const notePageLinkTag = (note, topic) => `<a class="note-link" href="${((process
 
 // generates the HTMl link tag for a topic page, from the index page
 const topicPageLinkTag = topic => 
-    `<a href="${((process.env.NETLIFY) ? "" : `${__dirname}/public/`) + topic.folder}.html" target="_blank" class="topic-tile-link">    
+    `<a href="${((process.env.NETLIFY) ? "" : `${__dirname}/public/`) + topic.folder}.html" class="topic-tile-link">    
         <div class="topic-tile-body">
             <p class="topic-tile-title">${topic.name}</p>
             <img src="${topic.image}" class="topic-tile-picture">
