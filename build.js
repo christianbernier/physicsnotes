@@ -3,7 +3,6 @@
 
 // TODO
 // - programmatically create shareimages
-// - make index page nicer
 
 const fs = require('fs-extra')
 const markdown = require("markdown-wasm")
@@ -31,7 +30,13 @@ const prettyDate = d => d.toLocaleString("en-US", { weekday: 'long', year: 'nume
 const notePageLinkTag = (note, topic) => `<a class="note-link" href="${((process.env.NETLIFY) ? "" : `${__dirname}/public/`) + topic.folder}/${note.file}.html">${note.name}</a>`
 
 // generates the HTMl link tag for a topic page, from the index page
-const topicPageLinkTag = topic => `<a class="topic-link" href="${((process.env.NETLIFY) ? "" : `${__dirname}/public/`) + topic.folder}.html">${topic.name}</a>`
+const topicPageLinkTag = topic => 
+    `<a href="${((process.env.NETLIFY) ? "" : `${__dirname}/public/`) + topic.folder}.html" target="_blank" class="topic-tile-link">    
+        <div class="topic-tile-body">
+            <p class="topic-tile-title">${topic.name}</p>
+            <img src="${topic.image}" class="topic-tile-picture">
+        </div>
+    </a>`
 
 // generates the index page at /public/index.html
 const generateIndexPage = () => {
