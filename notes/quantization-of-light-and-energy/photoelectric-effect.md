@@ -1,5 +1,5 @@
 ---
-title: Photoelectric Effect
+title: The Photoelectric Effect
 date: 2022-01-22
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Scattering and the Thomson Model
+title: The Thomson Model and Thomson Scattering
 date: 2022-02-05
 ---
 

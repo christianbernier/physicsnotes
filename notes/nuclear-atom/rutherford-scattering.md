@@ -1,5 +1,5 @@
 ---
-title: The Rutherford Model
+title: Rutherford Scattering
 date: 2022-02-05
 ---
 

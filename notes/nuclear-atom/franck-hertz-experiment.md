@@ -1,5 +1,5 @@
 ---
-title: Franck-Hertz Experiment
+title: The Franck-Hertz Experiment
 date: 2022-02-06
 ---
 

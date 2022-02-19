@@ -1,0 +1,139 @@
+{
+    "subjects": [
+        {
+            "name": "Modern Physics",
+            "topics": [
+                {
+                    "name": "Relativity",
+                    "folder": "relativity",
+                    "notes": [
+                        {
+                            "name": "Introduction to Special Relativity",
+                            "file": "intro-to-special-relativity"
+                        },
+                        {
+                            "name": "Lorentz Transformations",
+                            "file": "lorentz-transformations"
+                        },
+                        {
+                            "name": "Twin Paradox",
+                            "file": "twin-paradox"
+                        },
+                        {
+                            "name": "Energy, Momentum, and Conservation Laws",
+                            "file": "conservation-laws"
+                        }
+                    ]
+                },
+                {
+                    "name": "Quantization of Light and Energy",
+                    "folder": "quantization-of-light-and-energy",
+                    "notes": [
+                        {
+                            "name": "Electromagnetic Waves",
+                            "file": "em-waves"
+                        },
+                        {
+                            "name": "The Photoelectric Effect",
+                            "file": "photoelectric-effect"
+                        },
+                        {
+                            "name": "Thermal Radiation",
+                            "file": "thermal-radiation"
+                        },
+                        {
+                            "name": "The Compton Effect",
+                            "file": "compton-effect"
+                        },
+                        {
+                            "name": "Particle-like Photon Processes",
+                            "file": "photon-processes"
+                        },
+                        {
+                            "name": "Wave-Particle Duality",
+                            "file": "wave-particle-duality"
+                        }
+                    ]
+                },
+                {
+                    "name": "The Nuclear Atom",
+                    "folder": "nuclear-atom",
+                    "notes": [
+                        {
+                            "name": "Properties of Atoms",
+                            "file": "properties-of-atoms"
+                        },
+                        {
+                            "name": "The Thomson Model and Thomson Scattering",
+                            "file": "thomson-model-and-scattering"
+                        },
+                        {
+                            "name": "Rutherford Scattering",
+                            "file": "rutherford-scattering"
+                        },
+                        {
+                            "name": "Line Spectra",
+                            "file": "line-spectra"
+                        },
+                        {
+                            "name": "The Bohr Model",
+                            "file": "bohr-model"
+                        },
+                        {
+                            "name": "The Franck-Hertz Experiment",
+                            "file": "franck-hertz-experiment"
+                        }
+                    ]
+                },
+                {
+                    "name": "Wave Mechanics",
+                    "folder": "wave-mechanics",
+                    "notes": [
+                        {
+                            "name": "De Broglie Waves",
+                            "file": "de-broglie-waves"
+                        },
+                        {
+                            "name": "Uncertainty Relationships for Classical Particles",
+                            "file": "uncertainty-relationships"
+                        },
+                        {
+                            "name": "Heisenberg Uncertainty Relationships",
+                            "file": "heisenberg-uncertainty"
+                        },
+                        {
+                            "name": "Wave Packets",
+                            "file": "wave-packets"
+                        },
+                        {
+                            "name": "Wave Packet Motion",
+                            "file": "wave-packet-motion"
+                        },
+                        {
+                            "name": "Wave Probability and Randomness",
+                            "file": "wave-probability"
+                        }
+                    ]
+                },
+                {
+                    "name": "Quantum Mechanics",
+                    "folder": "quantum-mechanics",
+                    "notes": [
+                        {
+                            "name": "Waves at a Boundary",
+                            "file": "waves-at-boundaries"
+                        },
+                        {
+                            "name": "Confining a Particle",
+                            "file": "confining-particles"
+                        },
+                        {
+                            "name": "The Schrödinger Equation",
+                            "file": "schrödinger-equation"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

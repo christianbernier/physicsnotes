@@ -9,7 +9,7 @@ Say there are two observers: Observer $O$, who stays on Earth, and Observer $O'$
 
 Since each perceives the other moving with respect to themself, they will claim the other's time is passing slower (time dilation).
 
-When observer $O'$ returns to Earth, who would be younger? Observer $O$ would claim $O'$ is younger since observer $O'$ moved with respect to Earth, whereas $O'$ would claim $O$ is younger since the Earth moved with respect to $O'$'s rocket.
+When observer $O'$ returns to Earth, who would be younger? Observer $O$ would claim $O'$ is younger since observer $O'$ moved with respect to Earth, whereas $O'$ would claim $O$ is younger since the Earth moved with respect to $O'$ 's rocket.
 
 ## The Solution
 

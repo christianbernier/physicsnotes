@@ -1,5 +1,5 @@
 ---
-title: Compton Effect
+title: The Compton Effect
 date: 2022-02-02
 ---
 
