@@ -1,5 +1,5 @@
 // build.js
-// creates the HTML pages in public/ for all the blog pages in notes/
+// builds every page and share-image for every note, based on the notes in notes.json
 
 const fs = require('fs-extra')
 const markdown = require("markdown-wasm")
@@ -21,13 +21,17 @@ const topicTemplate = fs.readFileSync("src/topic-template.html", "utf8")
 const noteTemplate = fs.readFileSync("src/note-template.html", "utf8")
 
 // generates a date string given a date object
+// d    Date    the date to be processed
 // ex. Tuesday, February 1, 2022
 const prettyDate = d => d.toLocaleString("en-US", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })
 
 // generates the HTML link tag for a note page, from the corresponding topic page
+// note     Note    the note object the link is for
+// topic    Topic   the topic of the note the link is for
 const notePageLinkTag = (note, topic) => `<a class="note-link" href="${((process.env.NETLIFY) ? "" : `${__dirname}/public/`) + topic.folder}/${note.file}.html">${note.name}</a>`
 
 // generates the HTMl link tag for a topic page, from the index page
+// topic    Topic   the topic the link is for
 const topicPageLinkTag = topic =>
     `<a href="${((process.env.NETLIFY) ? "" : `${__dirname}/public/`) + topic.folder}.html" class="topic-tile-link">    
         <div class="topic-tile-body">
@@ -44,6 +48,8 @@ const generateIndexPage = () => {
 }
 
 // given a topic object, generates a page for that topic at /public/{topic}.html
+// and all its notes as separate note pages (see generateNotePage method)
+// topic    Topic   the topic to generate a page for
 const generateTopicPage = topic => {
     const topicHtml = topicTemplate
         .replace(/TOPIC/g, topic.name)
@@ -54,10 +60,13 @@ const generateTopicPage = topic => {
 }
 
 // given a note object and topic object, generates a page for that note at /public/{topic}/{note}.html
+// note     Note    the note the page is for
+// topic    Topic   the topic of the note the page is for
 const generateNotePage = (note, topic) => {
     // reads the data in the header of each note (includes title and date)
     const noteData = matter(fs.readFileSync(`notes/${topic.folder}/${note.file}.md`, "utf8"))
 
+    // generates the share image for the note
     generateImageForNote(note, topic)
 
     // converts note file (written in Markdown) into HTML
@@ -105,6 +114,8 @@ const generateNotePage = (note, topic) => {
 
 // given an array of lines of text, creates a string with lines
 // of max length maxChars with newline breaks
+// lines        [String]    the lines of text to be wrapped 
+// maxChars     int         the maximum number of characters allowed on one line
 // ex. given ["super long string"] with maxChars = 6: "super\nlong\nstring"
 const wrap = (lines, maxChars) => {
     // if every line is within maxChars, return that as a string
@@ -126,6 +137,9 @@ const wrap = (lines, maxChars) => {
     return wrap([...lines, next, rest.join(" ")], maxChars)
 }
 
+// generates the share image for a note and puts it in the public/ folder
+// note     Note    the note this share image is for
+// topic    Topic   the topic of the note this share image is for
 const generateImageForNote = async (note, topic) => {
     // set up image
     const image = canvas.createCanvas(1200, 630)
@@ -168,6 +182,7 @@ const generateImageForNote = async (note, topic) => {
     fs.writeFileSync(url, buffer)
 }
 
+// begin the building process using methods above
 generateIndexPage()
 modernPhysics.topics.forEach(t => generateTopicPage(t))
 
