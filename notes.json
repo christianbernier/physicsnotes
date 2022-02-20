@@ -6,7 +6,7 @@
                 {
                     "name": "Special Relativity",
                     "folder": "special-relativity",
-                    "image": "images/topic-glyphs/special-relativity.png",
+                    "image": "images/topic-glyphs/transparent/special-relativity.png",
                     "notes": [
                         {
                             "name": "Introduction to Special Relativity",
@@ -29,7 +29,7 @@
                 {
                     "name": "Quantization of Light and Energy",
                     "folder": "quantization-of-light-and-energy",
-                    "image": "images/topic-glyphs/quantization-of-light-and-energy.png",
+                    "image": "images/topic-glyphs/transparent/quantization-of-light-and-energy.png",
                     "notes": [
                         {
                             "name": "Electromagnetic Waves",
@@ -60,7 +60,7 @@
                 {
                     "name": "The Nuclear Atom",
                     "folder": "nuclear-atom",
-                    "image": "images/topic-glyphs/the-nuclear-atom.png",
+                    "image": "images/topic-glyphs/transparent/the-nuclear-atom.png",
                     "notes": [
                         {
                             "name": "Properties of Atoms",
@@ -91,7 +91,7 @@
                 {
                     "name": "Wave Mechanics",
                     "folder": "wave-mechanics",
-                    "image": "images/topic-glyphs/wave-mechanics.png",
+                    "image": "images/topic-glyphs/transparent/wave-mechanics.png",
                     "notes": [
                         {
                             "name": "De Broglie Waves",
@@ -122,7 +122,7 @@
                 {
                     "name": "Quantum Mechanics",
                     "folder": "quantum-mechanics",
-                    "image": "images/topic-glyphs/quantum-mechanics.png",
+                    "image": "images/topic-glyphs/transparent/quantum-mechanics.png",
                     "notes": [
                         {
                             "name": "Waves at a Boundary",
