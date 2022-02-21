@@ -66,8 +66,9 @@ const generateNotePage = (note, topic) => {
     // reads the data in the header of each note (includes title and date)
     const noteData = matter(fs.readFileSync(`notes/${topic.folder}/${note.file}.md`, "utf8"))
 
-    // generates the share image for the note
-    generateImageForNote(note, topic)
+    // generates the share image for the note if not on Netlify
+    if (!process.env.NETLIFY)
+        generateImageForNote(note, topic)
 
     // converts note file (written in Markdown) into HTML
     let noteHtml = markdown.parse(
