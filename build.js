@@ -177,7 +177,7 @@ const generateImageForNote = async (note, topic) => {
 
     // export image
     const buffer = image.toBuffer()
-    const url = `${__dirname}/public/images/shareimages/${topic.folder}/${note.file}.png`
+    const url = `${__dirname}/images/shareimages/${topic.folder}/${note.file}.png`
     fs.createFileSync(url)
     fs.writeFileSync(url, buffer)
 }
