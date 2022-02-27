@@ -135,6 +135,22 @@
                         {
                             "name": "The Schrödinger Equation",
                             "file": "schrödinger-equation"
+                        },
+                        {
+                            "name": "Applications of the Schrödinger Equation",
+                            "file": "schrödinger-equation-applications"
+                        },
+                        {
+                            "name": "The Simple Harmonic Oscillator",
+                            "file": "simple-harmonic-oscillator"
+                        },
+                        {
+                            "name": "Steps and Barriers",
+                            "file": "steps-and-barriers"
+                        },
+                        {
+                            "name": "Applications of Quantum Tunneling",
+                            "file": "quantum-tunneling-applications"
                         }
                     ]
                 }

@@ -86,8 +86,8 @@ const generateNotePage = (note, topic) => {
         .replace(/TOPIC_LINK/g, `../${topic.folder}.html`)
         .replace(/SHARE_IMAGE/g, `../images/shareimages/${topic.folder}/${note.file}.png`)
         .replace(/DATE/g, noteDate)
-        .replace(/\$\$(.+?)\$\$/g, (_, latex) => katex.renderToString(latex.replace(/<\/?em>/g, "*").replace(/<\/?del>/g, "~"), { throwOnError: false, displayMode: true, strict: ec => ec !== "newLineInDisplayMode" }))
-        .replace(/\$(.+?)\$/g, (_, latex) => katex.renderToString(latex.replace(/<\/?em>/g, "*").replace(/<\/?del>/g, "~"), { throwOnError: false }))
+        .replace(/\$\$(.+?)\$\$/g, (_, latex) => katex.renderToString(latex.replace(/<\/?em>/g, "*").replace(/<\/?del>/g, "~").replace(/amp;/g, "&"), { throwOnError: false, displayMode: true, strict: ec => ec !== "newLineInDisplayMode" }))
+        .replace(/\$(.+?)\$/g, (_, latex) => katex.renderToString(latex.replace(/<\/?em>/g, "*").replace(/<\/?del>/g, "~").replace(/amp;/g, "&"), { throwOnError: false }))
         .replace(/!!(.*)!!/g, `<span class="special">$1</span>`)
 
     // if the CHECK_SPELLING const is set, and it's not building for production,

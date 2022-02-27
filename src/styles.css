@@ -223,7 +223,7 @@ span.katex-display > * span.base:last-child {
 
 /* Other styles */
 img {
-    max-width: 100%;
+    width: 100%;
     box-shadow: var(--shadow);
     border-radius: var(--corner-radius);
 }
