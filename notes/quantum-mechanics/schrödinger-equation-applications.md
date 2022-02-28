@@ -5,7 +5,7 @@ date: 2022-02-27
 
 ## Constant Potential Energy
 
-If the potential energy is constant, the Schrödinger eqution becomes:
+If the potential energy is constant, the Schrödinger equation becomes:
 
 $$-\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}+U_0\psi\left(x\right)=E\psi\left(x\right)$$
 
@@ -19,7 +19,7 @@ from the equation for the wave function, $\psi$, the wave number, $k$, can be re
 
 $$k=\sqrt{\frac{2m\left(E-U_0\right)}{\hbar^2}}$$
 
-The solution to this equation gives a form where the second derivative is equal to itself multiplied by a negative constnat, meaning it can be represented in the form
+The solution to this equation gives a form where the second derivative is equal to itself multiplied by a negative constant, meaning it can be represented in the form
 
 $$\psi\left(x\right)=A\sin{kx}+B\cos{kx}$$
 
@@ -173,7 +173,7 @@ $$\psi\left(x\right)=Ge^{-k'x}$$
 
 We now have five unknowns: coefficients $A$, $B$, $C$, $G$, and the energy, $E$. Additionally, we have four equations from the boundary conditions (continuity for $\psi$ and now $d\psi/dx$ at both $x=0$ and $x=L$) and one equation from the normalization condition.
 
-The energy values must be determined numerically given the sitatuion since the resulting equation results in a transcendental equation that cannot be solved algebraically.
+The energy values must be determined numerically given the situation since the resulting equation results in a transcendental equation that cannot be solved algebraically.
 
 These equations can be solved with specific numbers, given a problem. The key quality of any solution however is that at the boundary conditions, the wave function satisfies both the continuity of the function itself and the continuity of the first derivative of the function, such as the examples shown below:
 

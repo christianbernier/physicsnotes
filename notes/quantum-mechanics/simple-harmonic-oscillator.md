@@ -55,7 +55,7 @@ Below are a few examples of what probability densities look like for harmonic os
 
 ### Uncertainties
 
-The resulting uncertainties for this sitaution are as follows:
+The resulting uncertainties for this situation are as follows:
 
 $$\Delta x=\sqrt{\hbar/2m\omega_0}\newline\Delta p\sqrt{\hbar\omega_0m/2}$$
 
