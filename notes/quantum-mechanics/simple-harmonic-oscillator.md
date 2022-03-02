@@ -57,6 +57,6 @@ Below are a few examples of what probability densities look like for harmonic os
 
 The resulting uncertainties for this situation are as follows:
 
-$$\Delta x=\sqrt{\hbar/2m\omega_0}\newline\Delta p\sqrt{\hbar\omega_0m/2}$$
+$$\Delta x=\sqrt{\hbar/2m\omega_0}\newline\Delta p=\sqrt{\hbar\omega_0m/2}$$
 
 And the product of the uncertainties is $\Delta x\Delta p=\hbar/2$, meaning the uncertainty is at a minimum (called "compact").
