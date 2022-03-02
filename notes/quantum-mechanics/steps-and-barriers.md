@@ -11,7 +11,7 @@ $$U\left(x\right)=\begin{cases} 0 & x \lt 0 \newline U_0 & x \geq 0\end{cases}$$
 
 Assuming the total energy of the particle, $E$, is greater than the potential energy $U_0$, the solutions of the Schrödinger equation become
 
-$$\psi_0\left(x\right)=A\sin{k_0x}+B\cos{k_0x}~~~~k_0=\sqrt{\frac{2mE}{\hbar^2}}~~~~x\lt 0\newline\psi_1\left(x\right)=C\sin{k_1x}+B\cos{k_1x}~~~~k_0=\sqrt{\frac{2m}{\hbar^2}\left(E-U_0\right)}~~~~x\gt 0$$
+$$\psi_0\left(x\right)=A\sin{k_0x}+B\cos{k_0x}~~~~k_0=\sqrt{\frac{2mE}{\hbar^2}}~~~~x\lt 0\newline\psi_1\left(x\right)=C\sin{k_1x}+B\cos{k_1x}~~~~k_1=\sqrt{\frac{2m}{\hbar^2}\left(E-U_0\right)}~~~~x\gt 0$$
 
 Finding the coefficients $A$, $B$, $C$, and $D$ can be found by applying the boundary conditions for $\psi$ and $\psi'=d\psi/dx$: $\psi_0\left(0\right)=\psi_1\left(0\right)$ and $\psi'_0\left(0\right)=\psi'_1\left(0\right)$.
 
