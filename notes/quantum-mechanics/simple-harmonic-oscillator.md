@@ -37,7 +37,7 @@ Using the equation for the angular frequency of a classical harmonic oscillator,
 
 The coefficient $A$ can be found using the normalization condition, and the result for the ground state wave function is $A=\left(m\omega_0/\hbar\pi\right)^{1/4}$. Therefore, the complete wave function is
 
-$$\psi\left(x\right)=\left(\frac{m\omega_0}{\hbar\pi}\right)^{1/4}e^{-\left(\sqrt{km}/2\hbar\right)}x^2$$
+$$\psi\left(x\right)=\left(\frac{m\omega_0}{\hbar\pi}\right)^{1/4}e^{-\left(\sqrt{km}/2\hbar\right)x^2}$$
 
 Note that the wave function penetrates into the forbidden region (beyond $x=\pm x_0$), whereas the classical oscillator does not.
 
