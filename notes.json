@@ -153,6 +153,33 @@
                             "file": "quantum-tunneling-applications"
                         }
                     ]
+                },
+                {
+                    "name": "Atomic Physics",
+                    "folder": "atomic-physics",
+                    "image": "images/topic-glyphs/transparent/atomic-physics.png",
+                    "notes": [
+                        {
+                            "name": "One-Dimensional Atom",
+                            "file": "one-dimensional-atom"
+                        },
+                        {
+                            "name": "Angular Momentum in a Hydrogen Atom",
+                            "file": "angular-momentum"
+                        },
+                        {
+                            "name": "Hydrogen Atom Wave Functions",
+                            "file": "hydrogen-atom-wave-functions"
+                        },
+                        {
+                            "name": "Radial Probability Densities",
+                            "file": "radial-probability-densities"
+                        },
+                        {
+                            "name": "Angular Probability Densities",
+                            "file": "angular-probability-densities"
+                        }
+                    ]
                 }
             ]
         }
