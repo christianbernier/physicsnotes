@@ -3,13 +3,13 @@ title: Angular Probability Densities
 date: 2022-03-06
 ---
 
-## What are the Angular Probabilty Densities?
+## What are the Angular Probability Densities?
 
 The angular parts of the probability density function from the wave function is
 
 $$P\left(\theta, \phi\right)=\left|\Theta_{l,m_l}\left(\theta\right)\Phi_{m_l}\left(\phi\right)\right|^2$$
 
-Looking at the $l=0$ and $l=1$ angular probabilty density functions, we see that all are *cylindrically symmetric*, and the $l=0$ wave function is *spherically symmetric*:
+Looking at the $l=0$ and $l=1$ angular probability density functions, we see that all are *cylindrically symmetric*, and the $l=0$ wave function is *spherically symmetric*:
 
 ![Angular probability densities](../../images/angular-probability-densities.jpeg)
 

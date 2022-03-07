@@ -13,7 +13,7 @@ To analyze the electron according to quantum mechanics, we analyze the Coulomb p
 
 $$U\left(r\right)=-\frac{e^2}{4\pi\epsilon_0r}$$
 
-In one demension, the Schrödinger equation for the electron therefore is
+In one dimension, the Schrödinger equation for the electron therefore is
 
 $$-\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}-\frac{e^2}{4\pi\epsilon_0x}\psi\left(x\right)=E\psi\left(x\right)$$
 

@@ -33,7 +33,7 @@ Solving the three-dimensional Schrödinger equation results in three indices (or
 
 One is $n$, the principle quantum number, which can take on values $1,2,3,...$. Another is the angular momentum quantum number, $l$, which can have values $0,1,2,...,n-1$. The third is the magnetic quantum number, $m_l$, which can have values $0,\pm 1,\pm 2,...,\pm l$.
 
-The principle quantum number ($n$) is the sameas the quantum number $n$ found using the Bohr model, and can be used to quantize the energy levels:
+The principle quantum number ($n$) is the same as the quantum number $n$ found using the Bohr model, and can be used to quantize the energy levels:
 
 $$E_n=-\frac{me^4}{32\pi^2\epsilon_0^2\hbar^2}\frac{1}{n^2}$$
 
@@ -49,9 +49,9 @@ The $n=2$ energy level has four different sets of quantum numbers: $\left(n=2,l=
 
 Even though degenerate combinations have the same energy, different combinations of quantum numbers do not have *exactly* the same energy (it differs by about $10^-5$ eV). Additionally, the transitions between levels depends on the degeneracy. Finally, *each combination of quantum numbers corresponds to a very different wave function, representing very different state of motion of the electron*. The degeneracy of the energy level influences how the atom can form bonds, for instance.
 
-## Probabilty Densities
+## Probability Densities
 
-Using the square of the three-dimensional wave function, $\left|\psi\left(r,\theta,\phi\right)\right|$ gives us the *volume probability density* at the location $\left(r,\theta,\phi\right)$. By using the volume element, $dV$, in spherical polar coordinates, we can find teh probability the electron is within a volume element:
+Using the square of the three-dimensional wave function, $\left|\psi\left(r,\theta,\phi\right)\right|$ gives us the *volume probability density* at the location $\left(r,\theta,\phi\right)$. By using the volume element, $dV$, in spherical polar coordinates, we can find the probability the electron is within a volume element:
 
 $$\left|\phi_{n,l,m_l}\left(r,\theta,\phi\right)\right|^2dV=\left|R_{n,l}\left(r\right)\right|^2\left|\Theta_{l,m_l}\left(\theta\right)\right|^2\left|\Phi_{m_l}\left(\phi\right)\right|^2r^2\sin{\theta}~dr~d\theta~d\phi$$
 

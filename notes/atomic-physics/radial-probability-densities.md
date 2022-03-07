@@ -5,9 +5,9 @@ date: 2022-03-06
 
 ## Why Radial Probability?
 
-The full three-dimensional probabilty function can be useful, but to analyze the probability an electron is a certain distance from the nucleus, the *radial probabilty density* is more useful.
+The full three-dimensional probability function can be useful, but to analyze the probability an electron is a certain distance from the nucleus, the *radial probability density* is more useful.
 
-Imagine a spherical shell of radius $r$ and thickness $dr$. The radial probabilty function, $P\left(r\right)$, is the probabilty of finding the electron in that shell. We define this function by integrating over the polar and azimuthal angles:
+Imagine a spherical shell of radius $r$ and thickness $dr$. The radial probability function, $P\left(r\right)$, is the probability of finding the electron in that shell. We define this function by integrating over the polar and azimuthal angles:
 
 $$P\left(r\right)=\left|R_{n,l}\left(r\right)\right|^2r^2~dr\int_0^\pi\left|\Theta_{l,m_l}\left(\theta\right)\right|^2\sin{\theta}~d\theta\int_0^{2\pi}\left|\Phi_{m_l}\left(\phi\right)\right|^2~d\phi$$
 

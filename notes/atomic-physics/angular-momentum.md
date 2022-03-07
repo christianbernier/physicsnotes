@@ -35,12 +35,12 @@ This is called *spatial quantization*. The number of possible orientations is $2
 
 ## Angular Momentum Uncertainty
 
-In quantum mechanics, the maximum amount of permitted information about the angular momentum vector is its length and $z$ component. Since a three-dimensional vector requires three numbers to fully describe it, we are always missing some informaiton about the angular momentum. Knowing $\left|\boldsymbol{\overrightarrow{L}}\right|$ and $L_z$ exactly results in $0$ information for $L_x$ and $L_y$ besides the fact that $\left|\boldsymbol{\overrightarrow{L}}\right|=L_x^2+L_y^2+L_z^2$. This results in the tip of the $\boldsymbol{\overrightarrow{L}}$ vector precessing around the $z$ axis, observed as a "smeared out" distribution of $L_x$ and $L_y$ values.
+In quantum mechanics, the maximum amount of permitted information about the angular momentum vector is its length and $z$ component. Since a three-dimensional vector requires three numbers to fully describe it, we are always missing some information about the angular momentum. Knowing $\left|\boldsymbol{\overrightarrow{L}}\right|$ and $L_z$ exactly results in $0$ information for $L_x$ and $L_y$ besides the fact that $\left|\boldsymbol{\overrightarrow{L}}\right|=L_x^2+L_y^2+L_z^2$. This results in the tip of the $\boldsymbol{\overrightarrow{L}}$ vector precessing around the $z$ axis, observed as a "smeared out" distribution of $L_x$ and $L_y$ values.
 
 This uncertainty can be described by the following uncertainty relationship:
 
 $$\Delta L_z\Delta\phi\geq\hbar$$
 
-where $\phi$ is the azimuthal angle from the $x$-axis to $\boldsymbol{\overrightarrow{L}}$. In other words, if one component of $\boldsymbol{\overrightarrow{L}}$ is completely known, the other two are completely undertermined.
+where $\phi$ is the azimuthal angle from the $x$-axis to $\boldsymbol{\overrightarrow{L}}$. In other words, if one component of $\boldsymbol{\overrightarrow{L}}$ is completely known, the other two are completely undetermined.
 
 This is why the length of the angular momentum vector cannot be defined as $l\hbar$: if this was true, it would be possible to know exactly the length and direction of the angular momentum, violating the uncertainty principle.
