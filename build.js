@@ -6,10 +6,10 @@ const markdown = require("markdown-wasm")
 const katex = require('katex')
 const spellchecker = require('spellchecker')
 const matter = require('gray-matter')
-const canvas = require('canvas')
+const canvas = require('canvas') 
 
 // should the files be checked for spelling?
-const CHECK_SPELLING = false
+const CHECK_SPELLING = false 
 
 // gets the structure of the notes from the notes.json file
 const fileStructure = JSON.parse(fs.readFileSync("notes.json", "utf8"))
