@@ -227,3 +227,28 @@ img {
     box-shadow: var(--shadow);
     border-radius: var(--corner-radius);
 }
+
+table {
+    width: 100%;
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.2rem;
+    border-collapse: collapse;
+    margin-bottom: 5rem;
+}
+
+tr {
+    line-height: 3rem;
+}
+
+thead > tr {
+    border-bottom: 2px solid #888;
+}
+
+tbody > tr {
+    border-bottom: 1px solid #aaa;
+}
+
+tbody > tr:last-of-type {
+    border-bottom: none;
+}

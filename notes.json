@@ -178,6 +178,14 @@
                         {
                             "name": "Angular Probability Densities",
                             "file": "angular-probability-densities"
+                        },
+                        {
+                            "name": "Intrinsic Spin",
+                            "file": "spin"
+                        },
+                        {
+                            "name": "Energy Levels and Spectroscopic Notation",
+                            "file": "spectroscopic-notation"
                         }
                     ]
                 }
