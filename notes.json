@@ -188,6 +188,33 @@
                             "file": "spectroscopic-notation"
                         }
                     ]
+                },
+                {
+                    "name": "Multielectron Atoms and Molecules",
+                    "folder": "multielectron-atoms-and-molecules",
+                    "image": "images/topic-glyphs/transparent/multielectron-atoms-and-molecules.png",
+                    "notes": [
+                        {
+                            "name": "Pauli Exclusion Principle",
+                            "file": "pauli-exclusion-principle"
+                        },
+                        {
+                            "name": "Electronic States in Multielectron Atoms",
+                            "file": "electronic-states"
+                        },
+                        {
+                            "name": "Outer Electrons, Screening and Optical Transitions",
+                            "file": "outer-electrons"
+                        },
+                        {
+                            "name": "Properties of Elements",
+                            "file": "properties-of-elements"
+                        },
+                        {
+                            "name": "Lasers",
+                            "file": "lasers"
+                        }
+                    ]
                 }
             ]
         }
