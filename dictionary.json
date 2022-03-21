@@ -10,6 +10,13 @@
         "suborbital",
         "suborbitals",
         "lasing",
-        "resistivities"
+        "resistivities",
+        "antibonding",
+        "homonuclear",
+        "heteronuclear",
+        "pp",
+        "sp",
+        "electronegativities",
+        "hcl"
     ]
 }

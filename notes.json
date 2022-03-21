@@ -213,6 +213,30 @@
                         {
                             "name": "Lasers",
                             "file": "lasers"
+                        },
+                        {
+                            "name": "The Hydrogen Molecule",
+                            "file": "hydrogen-molecule"
+                        },
+                        {
+                            "name": "Covalent Bonding",
+                            "file": "covalent-bonding"
+                        },
+                        {
+                            "name": "Ionic Bonding",
+                            "file": "ionic-bonding"
+                        },
+                        {
+                            "name": "Molecular Vibrations",
+                            "file": "molecular-vibrations"
+                        },
+                        {
+                            "name": "Molecular Rotations",
+                            "file": "molecular-rotations"
+                        },
+                        {
+                            "name": "Molecular Spectra",
+                            "file": "molecular-spectra"
                         }
                     ]
                 }
