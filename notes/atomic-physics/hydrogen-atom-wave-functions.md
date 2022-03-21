@@ -41,7 +41,7 @@ $$E_n=-\frac{me^4}{32\pi^2\epsilon_0^2\hbar^2}\frac{1}{n^2}$$
 
 Using the quantum numbers, the three-dimensional wave function can be separated as such:
 
-$$\psi_{n,l,m_l}\left(r,\theta,\phi\right)=R_{n,l}\left(r\right)+\Theta_{l,m_l}\left(\theta\right)+\Phi_{m_l}\left(\phi\right)$$
+$$\psi_{n,l,m_l}\left(r,\theta,\phi\right)=R_{n,l}\left(r\right)\Theta_{l,m_l}\left(\theta\right)\Phi_{m_l}\left(\phi\right)$$
 
 ### Degeneracy
 
