@@ -17,6 +17,11 @@
         "pp",
         "sp",
         "electronegativities",
-        "hcl"
+        "hcl",
+        "fcc",
+        "bcc",
+        "hcp",
+        "madelung",
+        "der"
     ]
 }

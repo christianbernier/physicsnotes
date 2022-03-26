@@ -239,6 +239,29 @@
                             "file": "molecular-spectra"
                         }
                     ]
+                },
+                {
+                    "name": "Solid-State Physics",
+                    "folder": "solid-state-physics",
+                    "image": "images/topic-glyphs/transparent/solid-state-physics.png",
+                    "notes": [
+                        {
+                            "name": "Crystal Structures",
+                            "file": "crystal-structures"
+                        },
+                        {
+                            "name": "Electrical Conduction",
+                            "file": "electrical-conduction"
+                        },
+                        {
+                            "name": "Band Theory of Solids",
+                            "file": "band-theory"
+                        },
+                        {
+                            "name": "Intrinsic and Impurity Semiconductors",
+                            "file": "semiconductors"
+                        }
+                    ]
                 }
             ]
         }
