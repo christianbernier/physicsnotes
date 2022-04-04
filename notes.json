@@ -262,6 +262,53 @@
                             "file": "semiconductors"
                         }
                     ]
+                },
+                {
+                    "name": "Nuclear Physics",
+                    "folder": "nuclear-physics",
+                    "image": "images/topic-glyphs/transparent/nuclear-physics.png",
+                    "notes": [
+                        {
+                            "name": "Nuclear Constituents",
+                            "file": "nuclear-constituents"
+                        },
+                        {
+                            "name": "Nuclear Sizes and Shapes",
+                            "file": "nuclear-shapes"
+                        },
+                        {
+                            "name": "Nuclear Masses and Binding Energies",
+                            "file": "nuclear-masses-and-binding-energies"
+                        },
+                        {
+                            "name": "The Nuclear Force",
+                            "file": "nuclear-force"
+                        },
+                        {
+                            "name": "Radioactive Decay",
+                            "file": "radioactive-decay"
+                        },
+                        {
+                            "name": "Alpha Decay",
+                            "file": "alpha-decay"
+                        },
+                        {
+                            "name": "Beta Decay",
+                            "file": "beta-decay"
+                        },
+                        {
+                            "name": "Gamma Decay",
+                            "file": "gamma-decay"
+                        },
+                        {
+                            "name": "Fission",
+                            "file": "fission"
+                        },
+                        {
+                            "name": "Fusion",
+                            "file": "fusion"
+                        }
+                    ]
                 }
             ]
         }
