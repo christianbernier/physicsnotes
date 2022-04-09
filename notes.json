@@ -309,6 +309,41 @@
                             "file": "fusion"
                         }
                     ]
+                },
+                {
+                    "name": "Particle Physics",
+                    "folder": "particle-physics",
+                    "image": "images/topic-glyphs/transparent/particle-physics.png",
+                    "notes": [
+                        {
+                            "name": "The Four Basic Forces",
+                            "file": "four-forces"
+                        },
+                        {
+                            "name": "Classifying Particles",
+                            "file": "classifying-particles"
+                        },
+                        {
+                            "name": "Conservation Laws",
+                            "file": "conservation-laws"
+                        },
+                        {
+                            "name": "Particle Interactions and Decays",
+                            "file": "particle-interactions"
+                        },
+                        {
+                            "name": "Energy and Momentum in Particle Decays",
+                            "file": "decay-energy-and-momentum"
+                        },
+                        {
+                            "name": "Energy and Momentum in Particle Reactions",
+                            "file": "reaction-energy-and-momentum"
+                        },
+                        {
+                            "name": "The Standard Model",
+                            "file": "standard-model"
+                        }
+                    ]
                 }
             ]
         }
