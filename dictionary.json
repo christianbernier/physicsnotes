@@ -25,6 +25,8 @@
         "der",
         "antielectron",
         "monoenergetic",
-        "tauon"
+        "tauon",
+        "leavitt",
+        "friedmann"
     ]
 }
